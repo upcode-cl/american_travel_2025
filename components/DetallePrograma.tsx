@@ -231,8 +231,9 @@ export default function DetallePrograma({ programa }: { programa: Program }) {
                 <small className="text-[14px] font-bold text-white text-shadow-md bg-amarillo-att p-4 mt-2">
                   CLP ${formatNumber((data?.Precio || 0) * cambioContadoValue)}
                 </small>
+                 <span>{data?.Texto}</span>
                 <span>Incluye impuestos, tasas y cargos</span>
-                <span>{data?.Texto}</span>
+               
               </div>
             </div>
           </div>

@@ -65,13 +65,13 @@ const Page = () => {
                 key={programa.IdPrograma}
               >
                 <Destinos_destacados
-                  key={programa.IdPrograma}
+                 // key={programa.IdPrograma}
                   Titulo={programa.Titulo}
                   Dias={programa.Dias.toString()}
                   Noches={programa.Noches.toString()}
                   Precio={programa.Precio.toString()}
                   Hotels={programa.ValoresProgramas[0]?.Hotel}
-                  ValorPersona={programa.ValoresProgramas[0]?.Text}
+                  ValorPersona={programa.Texto}
                   ImagenDestino={programa.UrlImage}
                   IdPrograma={programa.IdPrograma}
                   cambio={cambio}

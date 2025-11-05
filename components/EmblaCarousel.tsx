@@ -112,7 +112,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                     Noches={programas.Noches.toString()}
                     Precio={programas.Precio.toString()}
                     Hotels={programas.ValoresProgramas[0]?.Hotel}
-                    ValorPersona={programas.ValoresProgramas[0]?.Text}
+                    ValorPersona={programas.Texto}
                     ImagenDestino={programas.UrlImage}
                     IdPrograma={programas.IdPrograma}
                     cambio={cambio}

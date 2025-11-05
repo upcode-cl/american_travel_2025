@@ -10,32 +10,26 @@ import {
 
 const Acordion = () => {
   return (
-    <div className="p-8 md:p-20">
-      <div className="flex justify-center items-center gap-2">
-        {/* <MessageCircleQuestion /> */}
-        <h2 className="text-[40px] text-[#00296B]">Preguntas Frecuentes</h2>
-      </div>
-
+    <div className="w-full">
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1">
           <AccordionTrigger>
             ¿Cómo reservo un paquete turístico?
           </AccordionTrigger>
           <AccordionContent>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-            itaque mollitia aut voluptate, numquam eum, distinctio veritatis in
-            quasi magni, accusamus labore amet possimus nihil accusantium? Ex
-            eligendi quae ad.
+            Puedes reservar tu paquete turístico contactándonos directamente a través de WhatsApp al +56 9 90895441, 
+            por correo electrónico a vcabrera@americantraveltour.cl, o completando el formulario de contacto en nuestro sitio web. 
+            Nuestro equipo te guiará en todo el proceso de reserva.
           </AccordionContent>
         </AccordionItem>
 
         <AccordionItem value="item-2">
           <AccordionTrigger>¿Qué medios de pago aceptan?</AccordionTrigger>
           <AccordionContent>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Voluptatibus pariatur eius consectetur quis fuga rerum, illum, iusto
-            animi quidem quod officia doloremque quas necessitatibus dolores
-            deleniti sint eos, dolorum iste.
+            Aceptamos múltiples formas de pago: transferencia electrónica, depósito en dólares, cheques, 
+            tarjetas de crédito bancarias y pago vía WebPay. Nuestras cuentas son del Banco Santander 
+            (Cuenta Corriente en Pesos N° 61-55539-0 y en Dólares N° 5100067341). 
+            Razón Social: American Travel Tour Ltda. RUT: 76.966.970-1
           </AccordionContent>
         </AccordionItem>
 
@@ -44,22 +38,22 @@ const Acordion = () => {
             ¿Puedo cambiar la fecha de mi viaje?
           </AccordionTrigger>
           <AccordionContent>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Voluptatibus pariatur eius consectetur quis fuga rerum, illum, iusto
-            animi quidem quod officia doloremque quas necessitatibus dolores
-            deleniti sint eos, dolorum iste.
+            Sí, es posible realizar cambios en la fecha de tu viaje según disponibilidad y sujeto a las 
+            políticas de cancelación de los proveedores. Te recomendamos contactarnos con la mayor anticipación 
+            posible para coordinar cualquier modificación. Pueden aplicarse cargos adicionales dependiendo del tipo 
+            de servicio contratado.
           </AccordionContent>
         </AccordionItem>
 
         <AccordionItem value="item-4">
           <AccordionTrigger>
-            ¿Qué pasa si quiero cancelar mi reserva?
+            ¿Qué incluye el seguro de viaje?
           </AccordionTrigger>
           <AccordionContent>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Voluptatibus pariatur eius consectetur quis fuga rerum, illum, iusto
-            animi quidem quod officia doloremque quas necessitatibus dolores
-            deleniti sint eos, dolorum iste.
+            Todos nuestros programas incluyen un seguro con cobertura apropiada al destino elegido que contempla: 
+            seguro de accidente, asistencia médica, medicamentos, seguro de vida y rondas médicas. 
+            Contamos con guías profesionales con experiencia dedicada exclusivamente a garantizar la seguridad 
+            de nuestros viajeros.
           </AccordionContent>
         </AccordionItem>
 
@@ -68,10 +62,9 @@ const Acordion = () => {
             ¿Los precios son por persona o por grupo?
           </AccordionTrigger>
           <AccordionContent>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Voluptatibus pariatur eius consectetur quis fuga rerum, illum, iusto
-            animi quidem quod officia doloremque quas necessitatibus dolores
-            deleniti sint eos, dolorum iste.
+            Los precios pueden variar según el tipo de programa. Generalmente, nuestros paquetes están cotizados 
+            por persona, pero ofrecemos tarifas especiales para grupos, colegios y programas estudiantiles. 
+            Contáctanos para recibir una cotización personalizada según tus necesidades específicas.
           </AccordionContent>
         </AccordionItem>
       </Accordion>

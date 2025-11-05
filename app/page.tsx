@@ -1,3 +1,4 @@
+import React from "react";
 import Beneficios from "@/components/Beneficios";
 
 import EmblaCarousel from "@/components/EmblaCarousel";
@@ -5,7 +6,6 @@ import EmblaCarousel from "@/components/EmblaCarousel";
 import { EmblaOptionsType } from "embla-carousel";
 
 import Slider from "@/components/Slider";
-import Acordion from "@/components/Acordion";
 import Paquetes_destinos from "@/components/Paquetes_destinos";
 
 import Soporte from "@/components/Soporte";
@@ -15,7 +15,7 @@ const SLIDE_COUNT = 4;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 export default function Home() {
-  return (
+  return (<>
     <div className="">
       <Slider />
 
@@ -27,11 +27,11 @@ export default function Home() {
       <Beneficios />
       <EmblaCarousel slides={SLIDES} options={OPTIONS} />
       <Paquetes_destinos />
-      <Acordion />
+      {/* <Acordion /> */}
       <Soporte />
 
       {/* <Formulario /> */}
       {/* <Footer /> */}
     </div>
-  );
+  </>);
 }

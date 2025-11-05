@@ -10,6 +10,7 @@ import {
 import Image from "next/image";
 import { MailQuestion } from "lucide-react";
 import { Headphones } from "lucide-react";
+import Acordion from "./Acordion";
 
 const Footer = () => {
   return (
@@ -179,6 +180,21 @@ const Footer = () => {
                   nuestros destinos.
                 </DialogDescription>
               </DialogHeader>
+            </DialogContent>
+          </Dialog>
+
+
+        </div>
+        {/*acordeon  con las preguntas frecuentes*/}
+        <div>
+          <Dialog>
+            {/** Al hacer hover en Preguntas Frecuentes, debe cambiar el puntero para que  */}
+            <DialogTrigger className="cursor-pointer">Preguntas Frecuentes</DialogTrigger>
+            <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
+              <DialogHeader>
+                <DialogTitle>Preguntas Frecuentes</DialogTitle>
+              </DialogHeader>
+              <Acordion />
             </DialogContent>
           </Dialog>
         </div>

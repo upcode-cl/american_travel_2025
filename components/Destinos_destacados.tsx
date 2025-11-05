@@ -40,6 +40,8 @@ const Destinos_destacados = ({
   const cambioContadoValue =
     Number(String(cambio?.CambioContado || "0").replace(",", ".")) || 0;
 
+    
+
   return (
     <Link href={`/detalle-programa/${IdPrograma}`} className="font-semibold">
       <div className="w-full bg-gris-att rounded shadow-lg cursor-pointer hover:shadow-xl hover:scale-[1.02] transition-all duration-150 ease-out">
@@ -103,8 +105,8 @@ const Destinos_destacados = ({
           <div className="pb-2">
             <div className="flex">
               <Sun />
-              <span className="pl-2">{Dias} días </span> / <Moon />
-              <span className="pl-2">{Noches} noches</span>
+              <span className="pl-2">{Dias} Días </span> &nbsp;/&nbsp; <Moon />
+              <span className="pl-2">{Noches} Noches</span>
             </div>
           </div>
           <div className="pb-2 flex">
