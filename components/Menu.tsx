@@ -91,6 +91,7 @@ const Menu = () => {
           </SheetContent>
         </Sheet>
       </div>
+    <Link href="/">
       <Image
         src="/gira.png"
         width={70}
@@ -98,6 +99,7 @@ const Menu = () => {
         alt="logo"
         className=" md:hidden right-10 absolute"
       />
+      </Link>
       {/* fin menu mobile */}
       <div className="lg:w-[200px]">
         <Image src="/gira.png" width={150} height={150} alt="logo" />
