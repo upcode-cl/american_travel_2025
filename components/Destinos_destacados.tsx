@@ -49,15 +49,8 @@ const Destinos_destacados = ({
           interno se posicione relativo al contenedor */}
         <motion.div
           whileHover={{ scale: 1.02, filter: "saturate(1.5)" }} // Aumenta la saturación a 150% al hacer hover
-          className="relative w-full h-[400px] cursor-pointer " // Añadí cursor-pointer
-          style={{ height: "250px" }}
-        >
-          {/* Se utiliza el componente Image de next/image para mostrar una imagen
-            con el atributo src se indica la ruta de la imagen
-            con el atributo layout se indica que el tama o de la imagen sera
-            el mismo que el contenedor padre (en este caso el div con clase relative)
-            con el atributo objectFit se indica que la imagen se ajuste al tama o
-            del contenedor sin estar estirada */}
+          className="relative w-full h-[200px] sm:h-[250px] cursor-pointer" // Responsive height
+        >        
           <Image
             src={ImagenDestino || "/chile.jpg"}
             layout="fill"
@@ -66,35 +59,35 @@ const Destinos_destacados = ({
             className="rounded p-1  "
           />
         </motion.div>
-        <div className="flex flex-col relative  p-6  rounded-b-2xl">
+        <div className="flex flex-col relative p-4 sm:p-6 rounded-b-2xl">
           <h4 className="text-sm">
             <div className="relative">
               <div className="flex pb-3 ">
                 {/* <MapPin className="" /> <span className="pl-2"></span> */}
               </div>
-              <div className="bg-amarillo-att p-2 rounded w-[50%] -mt-[60px] right text-center absolute ml-[180px] text-white font-bold shadow-lg">
+              <div className="bg-amarillo-att p-1 sm:p-2 rounded text-xs sm:text-sm w-auto max-w-[60%] -mt-[50px] sm:-mt-[60px] right text-center absolute right-2 sm:right-4 text-white font-bold shadow-lg">
                 {subtitulo ? subtitulo : "Destacado"}
               </div>
             </div>
           </h4>
-          <h3 className="text-xl font-bold text-amarillo-att ">
-            <div className="flex flex-col text-[24px]">
+          <h3 className="text-lg sm:text-xl font-bold text-amarillo-att">
+            <div className="flex flex-col text-[18px] sm:text-[24px]">
               {Titulo === undefined ? (
                 <>
-                  <div className="flex ">
-                    <MapPin className="inline mb-1" />
-                    <span className="text-shadow-sm">--</span>
+                  <div className="flex items-center">
+                    <MapPin className="inline mb-1 w-4 h-4 sm:w-5 sm:h-5" />
+                    <span className="text-shadow-sm ml-1">--</span>
                   </div>
-                  <br></br>{" "}
-                  <small className="ml-2 text-black">
+                  <small className="ml-2 text-black text-xs sm:text-sm">
                     (Confirmar con Agente)
                   </small>
                 </>
               ) : (
                 <span className="">
-                  <MapPin className="inline mb-1" />
-                  <span className="text-shadow-sm">{Titulo}</span>
-                  <br></br>{" "}
+                  <div className="flex items-center">
+                    <MapPin className="inline mb-1 w-4 h-4 sm:w-5 sm:h-5" />
+                    <span className="text-shadow-sm ml-1">{Titulo}</span>
+                  </div>
                   {/* <small className="ml-2 text-black">
                     (Confirmar con Agente)
                   </small> */}
@@ -103,33 +96,35 @@ const Destinos_destacados = ({
             </div>
           </h3>
           <div className="pb-2">
-            <div className="flex">
-              <Sun />
-              <span className="pl-2">{Dias} Días </span> &nbsp;/&nbsp; <Moon />
-              <span className="pl-2">{Noches} Noches</span>
+            <div className="flex items-center text-sm sm:text-base">
+              <Sun className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="pl-1 sm:pl-2">{Dias} Días </span> 
+              <span className="mx-1">/</span> 
+              <Moon className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="pl-1 sm:pl-2">{Noches} Noches</span>
             </div>
           </div>
-          <div className="pb-2 flex">
-            <Hotel />
-            <div className="flex">{Hotels}</div>
+          <div className="pb-2 flex items-center text-sm sm:text-base">
+            <Hotel className="w-4 h-4 sm:w-5 sm:h-5" />
+            <div className="flex ml-1 sm:ml-2">{Hotels}</div>
           </div>
           <div className="flex flex-col items-end flex-grow">
-            <h5 className="pt-4 text-sm text-right">Desde</h5>
-            <h4 className="text-3xl pb-1 font-bold text-black text-right">
+            <h5 className="pt-2 sm:pt-4 text-xs sm:text-sm text-right">Desde</h5>
+            <h4 className="text-xl sm:text-3xl pb-1 font-bold text-black text-right">
               USD {precioFormateado}
             </h4>
-            <small className="text-[14px] mb-1 font-bold text-right">
+            <small className="text-[12px] sm:text-[14px] mb-1 font-bold text-right">
               CLP: ${formatNumber(Number(Precio || 0) * cambioContadoValue)}
             </small>
 
-            <p className="pb-4 text-right">
+            <p className="pb-2 sm:pb-4 text-right text-xs sm:text-sm">
               {ValorPersona ? ValorPersona : "Sin información disponible"}
             </p>
           </div>
 
-          <button className="bg-amarillo-att p-3 w-[100%] sm:w-[100%] rounded self-end hover:bg-gris-oscuro transition-all duration-150 cursor-pointer flex justify-center text-white">
+          <button className="bg-amarillo-att p-2 sm:p-3 w-[100%] rounded self-end hover:bg-gris-oscuro transition-all duration-150 cursor-pointer flex justify-center items-center text-white text-sm sm:text-base">
             Ver detalles
-            <ChevronRight />
+            <ChevronRight className="ml-1 w-4 h-4 sm:w-5 sm:h-5" />
           </button>
         </div>
       </div>

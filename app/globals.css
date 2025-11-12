@@ -145,11 +145,29 @@ body {
 }
 
 .embla {
-  max-width: 80%;
+  max-width: 95%;
   margin: auto;
   --slide-height: 19rem;
-  --slide-spacing: 1rem;
-  --slide-size: 33%;
+  --slide-spacing: 0.75rem;
+  --slide-size: 90%;
+}
+
+/* Responsive para tablets */
+@media (min-width: 640px) {
+  .embla {
+    max-width: 90%;
+    --slide-size: 50%;
+    --slide-spacing: 1rem;
+  }
+}
+
+/* Responsive para desktop */
+@media (min-width: 1024px) {
+  .embla {
+    max-width: 80%;
+    --slide-size: 33%;
+    --slide-spacing: 1rem;
+  }
 }
 .embla__viewport {
   overflow: hidden;
@@ -180,20 +198,31 @@ body {
   display: grid;
   grid-template-columns: auto 1fr;
   justify-content: space-between;
-  gap: 1.2rem;
-  margin-top: 1.8rem;
+  gap: 0.8rem;
+  margin-top: 1rem;
 }
 .embla__buttons {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.6rem;
+  gap: 0.4rem;
   align-items: center;
+}
+
+/* Responsive para controles */
+@media (min-width: 640px) {
+  .embla__controls {
+    gap: 1.2rem;
+    margin-top: 1.8rem;
+  }
+  .embla__buttons {
+    gap: 0.6rem;
+  }
 }
 .embla__button {
   -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
   -webkit-appearance: none;
   appearance: none;
-  background-color: transparent;
+  background-color: #E0A800;
   touch-action: manipulation;
   display: inline-flex;
   text-decoration: none;
@@ -201,15 +230,29 @@ body {
   border: 0;
   padding: 0;
   margin: 0;
-  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
-  width: 3.6rem;
-  height: 3.6rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  width: 2.8rem;
+  height: 2.8rem;
   z-index: 1;
   border-radius: 50%;
-  color: var(--text-body);
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.2s ease;
+}
+
+/* Responsive para botones */
+@media (min-width: 640px) {
+  .embla__button {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+}
+
+.embla__button:hover {
+  background-color: #2F3840;
+  transform: scale(1.05);
 }
 .embla__button:disabled {
   color: var(--detail-high-contrast);

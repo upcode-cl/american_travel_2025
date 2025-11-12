@@ -97,7 +97,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   }
 
   return (
-    <section className="embla pt-10 ">
+    <section className="embla pt-6 sm:pt-10 px-2 sm:px-0">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {loading
